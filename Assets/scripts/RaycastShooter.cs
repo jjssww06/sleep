@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class RaycastShooter : MonoBehaviour
 {
+    public ParticleSystem flashEffect;
     // Start is called before the first frame update
     void Update()
     {
         if(Input.GetMouseButton(0))
         {
+            flashEffect.Play();
             ShootRay();
         }
     }
